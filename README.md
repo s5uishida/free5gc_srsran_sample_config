@@ -1,0 +1,1 @@
+# free5gc_srsran_sample_config
