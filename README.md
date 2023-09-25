@@ -5,7 +5,9 @@ This briefly describes the overall and configuration files in the Virtualbox VM 
 
 ---
 
-<h2 id="conf_list">List of Sample Configurations</h2>
+<a id="conf_list"></a>
+
+## List of Sample Configurations
 
 1. One SMF, one UPF and one DNN (this article)
 2. [One SMF, Multiple UPFs and DNNs](https://github.com/s5uishida/free5gc_ueransim_sample_config)
@@ -17,7 +19,9 @@ This briefly describes the overall and configuration files in the Virtualbox VM 
 
 ---
 
-<h2 id="misc">Miscellaneous Notes</h2>
+<a id="misc"></a>
+
+## Miscellaneous Notes
 
 - [Install MongoDB 6.0 and free5GC WebUI](https://github.com/s5uishida/free5gc_install_mongodb6_webui)
 - [Install MongoDB 4.4.18 on Ubuntu 20.04 for Raspberry Pi 4B](https://github.com/s5uishida/install_mongodb_on_ubuntu_for_rp4b)
@@ -28,7 +32,9 @@ This briefly describes the overall and configuration files in the Virtualbox VM 
 
 ---
 
-<h2 id="toc">Table of Contents</h2>
+<a id="toc"></a>
+
+## Table of Contents
 
 - [Overview of free5GC 5GC Simulation Mobile Network](#overview)
 - [Changes in configuration files of free5GC 5GC and srsRAN 5G ZMQ UE / RAN](#changes)
@@ -49,7 +55,9 @@ This briefly describes the overall and configuration files in the Virtualbox VM 
   - [Case for going through DN 10.45.0.0/16](#ping_1)
 - [Changelog (summary)](#changelog)
 ---
-<h2 id="overview">Overview of free5GC 5GC Simulation Mobile Network</h2>
+<a id="overview"></a>
+
+## Overview of free5GC 5GC Simulation Mobile Network
 
 I created a 5GC mobile network (Internet reachable) for simulation with the aim of creating an environment in which packets can be sent end-to-end with one DN for one DNN.
 
@@ -103,14 +111,18 @@ free5GC 5GC U-Plane worked fine on Raspberry Pi 4 Model B. I used [Ubuntu 20.04 
 
 In addition, I have not confirmed the communication performance.
 
-<h2 id="changes">Changes in configuration files of free5GC 5GC and srsRAN 5G ZMQ UE / RAN</h2>
+<a id="changes"></a>
+
+## Changes in configuration files of free5GC 5GC and srsRAN 5G ZMQ UE / RAN
 
 Please refer to the following for building free5GC and srsRAN 5G ZMQ UE / RAN respectively.
 - free5GC v3.3.0 (2023.08.26) - https://github.com/free5gc/free5gc/wiki/Installation
 - srsRAN Project (RAN) (2023.08.26) - https://github.com/s5uishida/build_srsran_5g_zmq
 - srsRAN 4G (UE) (2023.08.26) - https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins
 
-<h3 id="changes_cp">Changes in configuration files of free5GC 5GC C-Plane</h3>
+<a id="changes_cp"></a>
+
+### Changes in configuration files of free5GC 5GC C-Plane
 
 The combination of DNN and S-NSSAI parameters can be used in the logic that selects UPF as the connection destination by PFCP.
 
@@ -292,7 +304,9 @@ For the sake of simplicity, This time, only DNN will be changed. S-NSSAI is fixe
    enable: true # true or false
 ```
 
-<h3 id="changes_up">Changes in configuration files of free5GC 5GC U-Plane</h3>
+<a id="changes_up"></a>
+
+### Changes in configuration files of free5GC 5GC U-Plane
 
 - `free5gc/config/upfcfg.yaml`
 ```diff
@@ -320,9 +334,13 @@ For the sake of simplicity, This time, only DNN will be changed. S-NSSAI is fixe
        # ifname: gtpif
 ```
 
-<h3 id="changes_srs">Changes in configuration files of srsRAN 5G ZMQ UE / RAN</h3>
+<a id="changes_srs"></a>
 
-<h4 id="changes_ran">Changes in configuration files of RAN</h4>
+### Changes in configuration files of srsRAN 5G ZMQ UE / RAN
+
+<a id="changes_ran"></a>
+
+#### Changes in configuration files of RAN
 
 See [here](https://github.com/s5uishida/build_srsran_5g_zmq#create-the-configuration-file-of-gnodeb) for the original files.
 
@@ -364,7 +382,9 @@ See [here](https://github.com/s5uishida/build_srsran_5g_zmq#create-the-configura
        ss2_type: common              # Search Space type, has to be set to common
 ```
 
-<h4 id="changes_ue">Changes in configuration files of UE</h4>
+<a id="changes_ue"></a>
+
+#### Changes in configuration files of UE
 
 See [here](https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins#create-the-configuration-file-of-nr-ue) for the original files.
 
@@ -415,9 +435,13 @@ See [here](https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins#c
  
 ```
 
-<h2 id="network_settings">Network settings of free5GC 5GC</h2>
+<a id="network_settings"></a>
 
-<h3 id="network_settings_up">Network settings of free5GC 5GC U-Plane</h3>
+## Network settings of free5GC 5GC
+
+<a id="network_settings_up"></a>
+
+### Network settings of free5GC 5GC U-Plane
 
 First, uncomment the next line in the `/etc/sysctl.conf` file and reflect it in the OS.
 ```
@@ -431,7 +455,9 @@ Next, configure the TUNnel interface and NAPT.
 # iptables -t nat -A POSTROUTING -s 10.60.0.0/16 ! -o upfgtp -j MASQUERADE
 ```
 
-<h2 id="build">Build free5GC and srsRAN 5G ZMQ UE / RAN</h2>
+<a id="build"></a>
+
+## Build free5GC and srsRAN 5G ZMQ UE / RAN
 
 Please refer to the following for building free5GC and srsRAN 5G ZMQ UE / RAN respectively.
 - free5GC v3.3.0 (2023.08.26) - https://github.com/free5gc/free5gc/wiki/Installation
@@ -461,11 +487,15 @@ cd ..
 git checkout main
 ```
 
-<h2 id="run">Run free5GC 5GC and srsRAN 5G ZMQ UE / RAN</h2>
+<a id="run"></a>
+
+## Run free5GC 5GC and srsRAN 5G ZMQ UE / RAN
 
 First run the 5GC, then the RAN, and the UE.
 
-<h3 id="run_cp">Run free5GC 5GC C-Plane</h3>
+<a id="run_cp"></a>
+
+### Run free5GC 5GC C-Plane
 
 First, run free5GC 5GC C-Plane.
 
@@ -497,7 +527,9 @@ trap terminate SIGINT
 wait ${PID_LIST}
 ```
 
-<h3 id="run_up">Run free5GC 5GC U-Plane</h3>
+<a id="run_up"></a>
+
+### Run free5GC 5GC U-Plane
 
 Next, run free5GC 5GC U-Plane.
 
@@ -507,7 +539,9 @@ Next, run free5GC 5GC U-Plane.
 # bin/upf
 ```
 
-<h3 id="run_ran">Run srsRAN 5G ZMQ RAN</h3>
+<a id="run_ran"></a>
+
+### Run srsRAN 5G ZMQ RAN
 
 Run srsRAN 5G ZMQ RAN and connect to free5GC 5GC.
 ```
@@ -532,7 +566,9 @@ The free5GC C-Plane log when executed is as follows.
 2023-08-27T00:11:21.191305842+09:00 [INFO][AMF][Ngap][ran_addr:192.168.0.121:53610] Send NG-Setup response
 ```
 
-<h3 id="run_ue">Run srsRAN 5G ZMQ UE</h3>
+<a id="run_ue"></a>
+
+### Run srsRAN 5G ZMQ UE
 
 Run srsRAN 5G ZMQ UE and connect to free5GC 5GC.
 ```
@@ -759,11 +795,15 @@ The result of `ip addr show` on VM4 (UE) is as follows.
 ...
 ```
 
-<h2 id="ping">Ping google.com</h2>
+<a id="ping"></a>
+
+## Ping google.com
 
 Specify the TUN interface on VM4 (UE) and try `ping`.
 
-<h3 id="ping_1">Case for going through DN 10.60.0.0/16</h3>
+<a id="ping_1"></a>
+
+### Case for going through DN 10.60.0.0/16
 
 Execute `tcpdump` on VM2 (U-Plane) and check that the packet goes through `if=upfgtp`.
 - `ping google.com` on VM4 (UE)
@@ -816,6 +856,8 @@ You could now create the end-to-end TUN interface on the DN and send any packets
 ---
 In investigating 5G SA, I have built a simulation environment and can now use a very useful system for investigating 5GC and MEC of 5G SA mobile network. I would like to thank the excellent developers and all the contributors of free5GC, srsRAN Project and srsRAN 4G.
 
-<h2 id="changelog">Changelog (summary)</h2>
+<a id="changelog"></a>
+
+## Changelog (summary)
 
 - [2023.08.26] Initial release.
