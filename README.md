@@ -70,8 +70,8 @@ The built simulation environment is as follows.
 
 The 5GC / UE / RAN used are as follows.
 - 5GC - free5GC v3.3.0 (2023.08.26) - https://github.com/free5gc/free5gc
-- RAN - srsRAN Project (2023.08.26) - https://github.com/srsran/srsRAN_Project
-- UE (NR-UE) - srsRAN 4G (2023.08.26) - https://github.com/srsran/srsRAN_4G
+- RAN - srsRAN Project (2023.08.07) - https://github.com/srsran/srsRAN_Project
+- UE (NR-UE) - srsRAN 4G (2023.06.19) - https://github.com/srsran/srsRAN_4G
 
 Each VMs are as follows.  
 | VM # | SW & Role | IP address | OS | Memory <br> (Min) | HDD <br> (Min) |
@@ -117,8 +117,8 @@ In addition, I have not confirmed the communication performance.
 
 Please refer to the following for building free5GC and srsRAN 5G ZMQ UE / RAN respectively.
 - free5GC v3.3.0 (2023.08.26) - https://github.com/free5gc/free5gc/wiki/Installation
-- srsRAN Project (RAN) (2023.08.26) - https://github.com/s5uishida/build_srsran_5g_zmq
-- srsRAN 4G (UE) (2023.08.26) - https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins
+- srsRAN Project (RAN) (2023.08.07) - https://github.com/s5uishida/build_srsran_5g_zmq
+- srsRAN 4G (UE) (2023.06.19) - https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins
 
 <a id="changes_cp"></a>
 
@@ -461,8 +461,8 @@ Next, configure the TUNnel interface and NAPT.
 
 Please refer to the following for building free5GC and srsRAN 5G ZMQ UE / RAN respectively.
 - free5GC v3.3.0 (2023.08.26) - https://github.com/free5gc/free5gc/wiki/Installation
-- srsRAN Project (RAN) (2023.08.26) - https://github.com/s5uishida/build_srsran_5g_zmq
-- srsRAN 4G (UE) (2023.08.26) - https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins
+- srsRAN Project (RAN) (2023.08.07) - https://github.com/s5uishida/build_srsran_5g_zmq
+- srsRAN 4G (UE) (2023.06.19) - https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins
 
 Install MongoDB on free5GC 5GC C-Plane machine.
 It is not necessary to install MongoDB on free5GC 5GC U-Plane machines.
