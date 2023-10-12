@@ -132,8 +132,6 @@ The combination of DNN and S-NSSAI parameters can be used in the logic that sele
 For the sake of simplicity, This time, only DNN will be changed. S-NSSAI is fixed as `SST=1` and `SD=000001`.
 
 - `free5gc/config/amfcfg.yaml`
-
-Please deal with [this](https://github.com/free5gc/free5gc/pull/494) as well.
 ```diff
 --- amfcfg.yaml.orig    2023-08-26 22:40:43.591429760 +0900
 +++ amfcfg.yaml 2023-08-26 22:52:47.646160715 +0900
