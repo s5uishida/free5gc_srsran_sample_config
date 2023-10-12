@@ -116,7 +116,7 @@ In addition, I have not confirmed the communication performance.
 ## Changes in configuration files of free5GC 5GC and srsRAN 5G ZMQ UE / RAN
 
 Please refer to the following for building free5GC and srsRAN 5G ZMQ UE / RAN respectively.
-- free5GC v3.3.0 (2023.08.26) - https://github.com/free5gc/free5gc/wiki/Installation
+- free5GC v3.3.0 (2023.08.26) - https://free5gc.org/guide/
 - srsRAN Project (RAN) (2023.09.20) - https://github.com/s5uishida/build_srsran_5g_zmq
 - srsRAN 4G (UE) (2023.06.19) - https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins
 
@@ -460,7 +460,7 @@ Next, configure the TUNnel interface and NAPT.
 ## Build free5GC and srsRAN 5G ZMQ UE / RAN
 
 Please refer to the following for building free5GC and srsRAN 5G ZMQ UE / RAN respectively.
-- free5GC v3.3.0 (2023.08.26) - https://github.com/free5gc/free5gc/wiki/Installation
+- free5GC v3.3.0 (2023.08.26) - https://free5gc.org/guide/
 - srsRAN Project (RAN) (2023.09.20) - https://github.com/s5uishida/build_srsran_5g_zmq
 - srsRAN 4G (UE) (2023.06.19) - https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins
 
@@ -468,24 +468,7 @@ Install MongoDB on free5GC 5GC C-Plane machine.
 It is not necessary to install MongoDB on free5GC 5GC U-Plane machines.
 [MongoDB Compass](https://www.mongodb.com/products/compass) is a convenient tool to look at the MongoDB database.
 
-**Note. If you want to use the latest committed version, please run the following script to checkout all NFs and Web Console to the latest `main` branch before building.**
-```bash
-#!/usr/bin/env bash
-
-NF_LIST="nrf amf smf udr pcf udm nssf ausf upf n3iwf"
-
-for NF in ${NF_LIST}; do
-    cd NFs/${NF}
-    git checkout main
-    cd ../..
-done
-
-cd webconsole
-git checkout main
-
-cd ..
-git checkout main
-```
+**Note. The installation guide also includes instructions on building the latest committed version.**
 
 <a id="run"></a>
 
