@@ -784,7 +784,7 @@ listening on upfgtp, link-type RAW (Raw IP), snapshot length 262144 bytes
 21:19:42.146251 IP 142.251.42.142 > 10.60.0.1: ICMP echo reply, id 15, seq 3, length 64
 ```
 In addition to `ping`, you may try to access the web by specifying the TUNnel interface with `curl` as follows.
-- Run `curl google.com` on VM4 (UE)
+- `curl google.com` on VM4 (UE)
 ```
 # curl --interface tun_srsue google.com
 <HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
