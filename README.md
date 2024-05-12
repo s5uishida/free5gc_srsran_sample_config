@@ -320,9 +320,9 @@ See [here](https://github.com/s5uishida/build_srsran_5g_zmq#create-the-configura
 
 - `srsRAN_Project/build/apps/gnb/gnb_zmq.yaml`
 ```diff
---- gnb_zmq.yaml.orig   2023-12-07 03:04:58.000000000 +0900
-+++ gnb_zmq.yaml        2024-04-06 15:17:58.192401911 +0900
-@@ -3,13 +3,24 @@
+--- gnb_zmq.yaml.orig   2024-04-23 20:02:09.000000000 +0900
++++ gnb_zmq.yaml        2024-05-12 16:13:13.243911043 +0900
+@@ -3,13 +3,21 @@
  # To run the srsRAN Project gNB with this config, use the following command: 
  #   sudo ./gnb -c gnb_zmq.yaml
  
@@ -339,9 +339,6 @@ See [here](https://github.com/s5uishida/build_srsran_5g_zmq#create-the-configura
 +#  bind_addr: 10.53.1.1             # A local IP that the gNB binds to for traffic from the AMF.
 +  n2_bind_addr: 192.168.0.121          # Optional TEXT. Sets local IP address to bind for N2 interface. Format: IPV4 or IPV6 IP address.
 +  n3_bind_addr: 192.168.0.121          # Optional TEXT. Sets local IP address to bind for N3 interface. Format: IPV4 or IPV6 IP address.
-+
-+cu_cp:
-+  inactivity_timer: 7200               # Optional INT (7200). Sets the UE/PDU Session/DRB inactivity timer in seconds. Supported: [1 - 7200].
  
  ru_sdr:
    device_driver: zmq                # The RF driver name.
@@ -350,7 +347,7 @@ See [here](https://github.com/s5uishida/build_srsran_5g_zmq#create-the-configura
    srate: 23.04                      # RF sample rate might need to be adjusted according to selected bandwidth.
    tx_gain: 75                       # Transmit gain of the RF might need to adjusted to the given situation.
    rx_gain: 75                       # Receive gain of the RF might need to adjusted to the given situation.
-@@ -20,7 +31,7 @@
+@@ -20,7 +28,7 @@
    channel_bandwidth_MHz: 20         # Bandwith in MHz. Number of PRBs will be automatically derived.
    common_scs: 15                    # Subcarrier spacing in kHz used for data.
    plmn: "00101"                     # PLMN broadcasted by the gNB.
