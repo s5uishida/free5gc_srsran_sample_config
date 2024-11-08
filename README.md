@@ -48,6 +48,8 @@ The built simulation environment is as follows.
 
 The 5GC / UE / RAN used are as follows.
 - 5GC - free5GC v3.4.3 (2024.11.08) - https://github.com/free5gc/free5gc
+- UPF - go-upf v1.2.3 (2024.11.04) - https://github.com/free5gc/go-upf
+- (UPF) - gtp5g v0.9.3 (2024.11.06) - https://github.com/free5gc/gtp5g
 - RAN - srsRAN Project (2024.10.14) - https://github.com/srsran/srsRAN_Project
 - UE (NR-UE) - srsRAN 4G (2024.02.01) - https://github.com/srsran/srsRAN_4G
 
@@ -95,6 +97,8 @@ In addition, I have not confirmed the communication performance.
 
 Please refer to the following for building free5GC and srsRAN 5G ZMQ UE / RAN respectively.
 - free5GC v3.4.3 (2024.11.08) - https://free5gc.org/guide/
+- go-upf v1.2.3 (2024.11.04) - https://free5gc.org/guide/
+- gtp5g v0.9.3 (2024.11.06) - https://free5gc.org/guide/
 - srsRAN Project (RAN) (2024.10.14) - https://github.com/s5uishida/build_srsran_5g_zmq
 - srsRAN 4G (UE) (2024.02.01) - https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins
 
@@ -468,6 +472,8 @@ Next, configure the TUNnel interface and NAPT.
 
 Please refer to the following for building free5GC and srsRAN 5G ZMQ UE / RAN respectively.
 - free5GC v3.4.3 (2024.11.08) - https://free5gc.org/guide/
+- go-upf v1.2.3 (2024.11.04) - https://free5gc.org/guide/
+- gtp5g v0.9.3 (2024.11.06) - https://free5gc.org/guide/
 - srsRAN Project (RAN) (2024.10.14) - https://github.com/s5uishida/build_srsran_5g_zmq
 - srsRAN 4G (UE) (2024.02.01) - https://github.com/s5uishida/build_srsran_4g_zmq_disable_rf_plugins
 
