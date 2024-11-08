@@ -52,7 +52,7 @@ The 5GC / UE / RAN used are as follows.
 - UE (NR-UE) - srsRAN 4G (2024.02.01) - https://github.com/srsran/srsRAN_4G
 
 Each VMs are as follows.  
-| VM | SW & Role | IP address | OS | CPU <br> (Min) | Memory <br> (Min) | HDD <br> (Min) |
+| VM | SW & Role | IP address | OS | CPU <br> (Min) | Mem <br> (Min) | HDD <br> (Min) |
 | --- | --- | --- | --- | --- | --- | --- |
 | VM1 | free5GC 5GC C-Plane | 192.168.0.141/24 | Ubuntu 24.04 | 1 | 2GB | 20GB |
 | VM2 | free5GC 5GC U-Plane  | 192.168.0.142/24 | Ubuntu 24.04 | 1 | 1GB | 20GB |
